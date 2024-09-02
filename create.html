@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Pinterest</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const dropdownToggle = document.querySelector('.dropdown-toggle');
+      const dropdownMenu = document.querySelector('.dropdown-menu');
+
+      const floatMenu = document.querySelector('.float-menu');
+      const floatTogglePopup = document.querySelector('.float-icon');
+
+      floatTogglePopup.addEventListener('click', function () {
+        floatTogglePopup.classList.toggle('active');
+        floatMenu.classList.toggle('show');
+      });
+
+      dropdownToggle.addEventListener('click', function () {
+        dropdownToggle.classList.toggle('active');
+        dropdownMenu.classList.toggle('show');
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!dropdownToggle.contains(e.target)) {
+          dropdownToggle.classList.remove('active');
+          dropdownMenu.classList.remove('show');
+        }
+        if (!floatTogglePopup.contains(e.target)) {
+          floatTogglePopup.classList.remove('active');
+          floatMenu.classList.remove('show');
+        }
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <!-- header -->
+  <div class="header">
+    <div class="logo">
+      <img src="img/Pinterest-logo.png" alt="Pinterest logo">
+    </div>
+    <div class="icons">
+      <a href="index.html">
+        <p>Home</p>
+      </a>
+      <a href="#">
+        <p>Explore</p>
+      </a>
+      <a href="create.html" style="padding: 2px 17px; background-color: black; color: white; border-radius: 20px;">
+        <p>Create</p>
+      </a>
+    </div>
+    <input type="text" placeholder="&#x1F50D; Search">
+    <div class="icons">
+      <a href="#"><img src="img/messages.png" alt="Messages"></a>
+      <a href="#"><img src="img/bell.png" alt="Notifications"></a>
+      <a href="#" style="border-radius: 50%; padding: 8px 12px; background-color: #efefef;">R</a>
+      <div class="dropdown">
+        <button class="dropdown-toggle">
+          <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-menu">
+          <div class="user-info">
+            <p>Currently in</p>
+            <div class="user-account">
+              <span class="user-icon">A</span>
+              <span class="user-details">
+                <strong>Raathika</strong><br>
+                <small>Personal<br>artistraathika@gmail.com</small>
+              </span>
+              <span class="checkmark">✔</span>
+            </div>
+          </div>
+          <div class="menu-items">
+            <a href="#">Add account</a>
+            <a href="#">Convert to business</a>
+          </div>
+          <div class="menu-items">
+            <a href="#">Settings</a>
+            <a href="#">Home feed tuner</a>
+            <a href="#">Install the Chrome app</a>
+            <a href="#">Reports and Violations Centre</a>
+            <a href="#">Your privacy rights</a>
+          </div>
+          <div class="menu-items">
+            <a href="#">Help Centre</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Be a beta tester</a>
+            <a href="#">Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main>
+    <div class="create-pin-container">
+      <div class="upload-section">
+        <div class="upload-box">
+          <input type="file" id="fileUpload" hidden>
+          <label for="fileUpload">
+            <div class="upload-content">
+              <span class="upload-icon">⬆</span>
+              <p>Choose a file or drag and drop it here</p>
+              <small>We recommend using high-quality .jpg files less than 20MB or .mp4 files less than 200MB.</small>
+            </div>
+          </label>
+        </div>
+        <button class="save-url-button">Save from URL</button>
+      </div>
+
+      <div class="details-section">
+        <input type="text" class="input-title" placeholder="Add a title">
+        <textarea class="input-description" placeholder="Add a detailed description"></textarea>
+        <input type="text" class="input-link" placeholder="Add a link">
+        <input type="text" class="input-board" placeholder="Choose a board">
+        <input type="text" class="input-tags" placeholder="Search for a tag">
+        <button class="add-products-button">Add products</button>
+        <div class="more-options">
+          <span>More options ▼</span>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

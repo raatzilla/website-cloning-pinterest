@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Pinterest</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const dropdownToggle = document.querySelector('.dropdown-toggle');
+      const dropdownMenu = document.querySelector('.dropdown-menu');
+
+      const floatMenu = document.querySelector('.float-menu');
+      const floatTogglePopup = document.querySelector('.float-icon');
+
+      floatTogglePopup.addEventListener('click', function () {
+        floatTogglePopup.classList.toggle('active');
+        floatMenu.classList.toggle('show');
+      });
+
+      dropdownToggle.addEventListener('click', function () {
+        dropdownToggle.classList.toggle('active');
+        dropdownMenu.classList.toggle('show');
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!dropdownToggle.contains(e.target)) {
+          dropdownToggle.classList.remove('active');
+          dropdownMenu.classList.remove('show');
+        }
+        if (!floatTogglePopup.contains(e.target)) {
+          floatTogglePopup.classList.remove('active');
+          floatMenu.classList.remove('show');
+        }
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <!-- header -->
+  <div class="header">
+    <div class="logo">
+      <img src="img/Pinterest-logo.png" alt="Pinterest logo">
+    </div>
+    <div class="icons">
+      <a href="index.html" style="padding: 2px 17px; background-color: black; color: white; border-radius: 20px;">
+        <p>Home</p>
+      </a>
+      <a href="#">
+        <p>Explore</p>
+      </a>
+      <a href="create.html">
+        <p>Create</p>
+      </a>
+    </div>
+    <input type="text" placeholder="&#x1F50D; Search">
+    <div class="icons">
+      <a href="#"><img src="img/messages.png" alt="Messages"></a>
+      <a href="#"><img src="img/bell.png" alt="Notifications"></a>
+      <a href="#" style="border-radius: 50%; padding: 8px 12px; background-color: #efefef;">R</a>
+      <div class="dropdown">
+        <button class="dropdown-toggle">
+          <span class="arrow">▼</span>
+        </button>
+        <div class="dropdown-menu">
+          <div class="user-info">
+            <p>Currently in</p>
+            <div class="user-account">
+              <span class="user-icon">A</span>
+              <span class="user-details">
+                <strong>Raathika</strong><br>
+                <small>Personal<br>artistraathika@gmail.com</small>
+              </span>
+              <span class="checkmark">✔</span>
+            </div>
+          </div>
+          <div class="menu-items">
+            <a href="#">Add account</a>
+            <a href="#">Convert to business</a>
+          </div>
+          <div class="menu-items">
+            <a href="#">Settings</a>
+            <a href="#">Home feed tuner</a>
+            <a href="#">Install the Chrome app</a>
+            <a href="#">Reports and Violations Centre</a>
+            <a href="#">Your privacy rights</a>
+          </div>
+          <div class="menu-items">
+            <a href="#">Help Centre</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Be a beta tester</a>
+            <a href="#">Log out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="tile-container">
+      <div class="tile">
+        <img src="img/tile1.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Instagram xxKeWlgUrLxx</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile2.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Art by flowerX</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile3.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Etsy</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile4.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Moebius</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile5.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Happy Design</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile6.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Lovely</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile7.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Anthropologie</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile8.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Lululemon</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile9.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Love this</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile10.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>fffound</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile11.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Where can I find this??</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile12.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Blue</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile13.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Perfect for home</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile14.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Instagram</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile15.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Etsy</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile16.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Love love love</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile1.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Instagram xxKeWlgUrLxx</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile2.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Art by flowerX</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile3.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Etsy</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile4.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Moebius</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile5.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Happy Design</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile6.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Lovely</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile7.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Anthropologie</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile8.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Lululemon</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile9.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Love this</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile10.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>fffound</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile11.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Where can I find this??</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile12.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Blue</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile13.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Perfect for home</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile14.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Instagram</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile15.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Etsy</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile16.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Love love love</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile1.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Instagram xxKeWlgUrLxx</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile2.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Art by flowerX</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile3.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Etsy</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile4.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Moebius</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile5.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Happy Design</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile6.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Lovely</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile7.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Anthropologie</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile8.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Lululemon</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile9.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Love this</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile10.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>fffound</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile11.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Where can I find this??</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile12.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Blue</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile13.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Perfect for home</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile14.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Instagram</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile15.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Etsy</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile16.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Love love love</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile1.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Instagram xxKeWlgUrLxx</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile2.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Art by flowerX</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile3.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Etsy</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile4.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Moebius</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile5.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Happy Design</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile6.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Lovely</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile7.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Anthropologie</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile8.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Lululemon</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile9.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Love this</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile10.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>fffound</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile11.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Where can I find this??</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile12.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Blue</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile13.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Perfect for home</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile14.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Instagram</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile15.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Etsy</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile16.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Love love love</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile1.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Instagram xxKeWlgUrLxx</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile2.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Art by flowerX</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile3.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Etsy</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile4.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Moebius</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile5.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Happy Design</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile6.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Lovely</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile7.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Anthropologie</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile8.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Lululemon</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile9.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Love this</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile10.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>fffound</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile11.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Where can I find this??</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile12.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Blue</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile13.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Perfect for home</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile14.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Instagram</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile15.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Etsy</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+      <div class="tile">
+        <img src="img/tile16.jpg" alt="tile picture">
+        <div class="overlay">
+          <img src="img/share.png" alt="share icon">
+          <p>&#9906; Save</p>
+        </div>
+        <div class="tile-bottom">
+          <p>Love love love</p>
+          <img src="img/dots.png" alt="Extra Tile Menu">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-float">
+    <div class="floats">
+      <div class="float-icon">?</div>
+      <div class="floats-menu">
+        <div class="menu-items">
+          <a href="#">Visit The Help</a>
+          <a href="#">Create Widget</a>
+          <a href="#">Buisiness Careers</a>
+          <a href="#">Developers</a>
+          <a href="#">Removals</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
